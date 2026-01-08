@@ -115,8 +115,7 @@ int	main(int argc, char *argv[])
 	// root->x = 15;
 	// root->next = NULL;
 	insert_end(&root, -2);
-	insert_beginning(&root, 56);
-	// insert_end(&root, 11);
+	insert_beginning(&root, 6);
 	t_node*	current = root;
 	while (current != NULL)
 	{
@@ -177,3 +176,4 @@ int	main(int argc, char *argv[])
 // 	deallocate(&root);
 // 	return (0);
 // }
+

@@ -6,7 +6,14 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/05 19:47:59 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/07 15:53:16 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifdef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <stdlib.h>
+# include <stdio.h>
+
+#endif

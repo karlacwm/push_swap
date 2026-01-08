@@ -7,3 +7,14 @@
 # Instructions
 
 # Resources
+
+
+loop stack a, find min and max to decide how many chunks
+ascending / descending order
+
+push swap
+error
+push
+swap
+rotate
+reverse rotate
