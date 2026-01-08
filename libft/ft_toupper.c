@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/08 12:20:17 by wcheung          ###   ########.fr       */
+/*   Created: 2025/10/15 14:58:16 by wcheung           #+#    #+#             */
+/*   Updated: 2025/10/25 16:22:45 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-
-#endif
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
+}

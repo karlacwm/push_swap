@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/08 12:20:17 by wcheung          ###   ########.fr       */
+/*   Created: 2025/10/13 15:43:33 by wcheung           #+#    #+#             */
+/*   Updated: 2025/10/14 16:52:52 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-
-#endif
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
+}

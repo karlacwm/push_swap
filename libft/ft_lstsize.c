@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/08 12:20:17 by wcheung          ###   ########.fr       */
+/*   Created: 2026/01/07 16:35:39 by wcheung           #+#    #+#             */
+/*   Updated: 2026/01/07 16:47:02 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
+int ft_lstsize(t_list *lst)
+{
+	int	i;
+	t_list	*current;
 
-#endif
+	i = 0;
+	current = lst;
+	while (current)
+	{
+		current = current->next;
+		i++;
+	}
+	return (i);
+}

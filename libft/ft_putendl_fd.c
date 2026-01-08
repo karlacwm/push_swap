@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/08 12:20:17 by wcheung          ###   ########.fr       */
+/*   Created: 2025/10/24 15:28:20 by wcheung           #+#    #+#             */
+/*   Updated: 2025/10/25 13:01:02 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
+void	ft_putendl_fd(char *str, int fd)
+{
+	if (!str)
+		return ;
+	ft_putstr_fd(str, fd);
+	ft_putchar_fd('\n', fd);
+}
 
-#endif
+// int main(void)
+// {
+//     char a[] = "heilbronn hauptbahnhof";
+//     ft_putendl_fd(a, 1);
+//     return (0);
+// }

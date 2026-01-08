@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/08 12:20:17 by wcheung          ###   ########.fr       */
+/*   Created: 2025/10/18 23:48:35 by wcheung           #+#    #+#             */
+/*   Updated: 2025/10/25 16:14:03 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
+char	*ft_strdup(const char *str)
+{
+	char	*copy;
+	size_t	copy_len;
 
-#endif
+	copy_len = ft_strlen(str);
+	copy = (char *)malloc(sizeof(char) * (copy_len + 1));
+	if (!copy)
+		return (NULL);
+	ft_memcpy(copy, str, (sizeof(char) * (copy_len + 1)));
+	return (copy);
+}
+
+	// size_t	i;
+
+	// i = 0;
+	// while (str[i])
+	// {
+	// 	copy[i] = str[i];
+	// 	i++;
+	// }
+	// copy[i] = 0;
