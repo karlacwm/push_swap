@@ -6,16 +6,14 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 16:17:08 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/07 16:33:55 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/08 18:17:41 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
 }
-
-

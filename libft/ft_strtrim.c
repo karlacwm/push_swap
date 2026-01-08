@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:23:26 by wcheung           #+#    #+#             */
-/*   Updated: 2025/10/27 10:13:45 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/08 18:15:53 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[trimmed_len] = '\0';
 	return (trimmed);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char a[] = "abaBBBaaa";
-	char b[] = "aba";
-	printf("ft_strtrim: %s", ft_strtrim(a, b));
-}
+// int	main(void)
+// {
+// 	char a[] = "abaBBBaaa";
+// 	char b[] = "aba";
+// 	printf("ft_strtrim: %s", ft_strtrim(a, b));
+// }
