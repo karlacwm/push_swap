@@ -1,12 +1,15 @@
 NAME = push_swap.a
 
+LIBFT_DIR = ./libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 AR = ar
 ARFLAGS = -rcs
 
-SRCS =
+SRCS = push_swap.c swap.c
 
 OBJ = ${SRCS:%.c=%.o}
 
@@ -14,15 +17,23 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+$(LIBFT):
+	make -C $(LIBFT_DIR)
+
+$(NAME): $(LIBFT) $(OBJ)
+	cp $(LIBFT) $(NAME)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 clean:
-		$(RM) $(OBJ)
+	make -C $(LIBFT_DIR) clean
+	$(RM) $(OBJ)
 
 fclean: clean
-		$(RM) $(NAME)
+	make -C $(LIBFT_DIR) fclean
+	$(RM) $(NAME)
 
-re: fclean all
+re:
+	$(MAKE) fclean
+	$(MAKE) all
 
 .PHONY: all clean fclean re

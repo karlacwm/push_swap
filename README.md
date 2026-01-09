@@ -12,7 +12,7 @@
 loop stack a, find min and max to decide how many chunks
 ascending / descending order
 
-push swap
+pushswap
 error
 push
 swap
