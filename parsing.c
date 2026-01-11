@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:26:24 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/11 11:43:44 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/11 20:28:45 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,19 @@ int	check_duplicates(t_node *a, int n)
 	}
 	return (0);
 }
+
+t_node	*stack_new(int content)
+
+void	build_stack_a()
+{
+	while ()
+{
+	if (check_integers())
+		error;
+	if (check_duplicates(*a, (int)n))
+		error;
+	ft_lstaddback
+	next
+}
+}
+

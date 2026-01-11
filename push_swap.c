@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:35:25 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/09 20:05:38 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/11 12:20:18 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,4 @@ int	push_swap(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	// if (error)
-	// {
-	// 	write(2, "Error\n", 6);
-	// 	free_stack(stack_a);
-	// 	return ;
-	// }
-	// print_stack(stack_a);
-	return (0);
 }
