@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:37:29 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/11 21:22:30 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 19:52:23 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // put index according to rank in array
 // sort array wont count as operations
 
-int stack_size(t_node *stack)
+int	stack_size(t_node *stack)
 {
 	int		i;
 	t_node	*current;
@@ -90,7 +90,8 @@ void	indexing(t_node *stack)
 		i = 0;
 		while (i < size)
 		{
-			// array[i]
+			if (array[i] == tmp->value)
+				tmp->index = i;
 			i++;
 		}
 		tmp = tmp->next;

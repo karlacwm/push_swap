@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:07:34 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/12 15:04:36 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 19:00:53 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,16 @@ void	sort_three(t_node **stack_a)
 
 void	sort_four(t_node **stack_a)
 {
-	
+	pb
+	sort three
 }
+
 void	sort_five(t_node **stack_a)
 {
-
+	pb twice
+	sort three
 }
 // 3	3	2	2	1	1
 // 2	1	3	1	3	2
 // 1	2	1	3	2	3
+
