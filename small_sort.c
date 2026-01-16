@@ -6,46 +6,49 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:07:34 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 19:00:53 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 21:31:58 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_two(t_node **stack_a)
+void	sort_two(t_node **a)
 {
 	int	first;
 	int	second;
 
-	first = (*stack_a)->index;
-	second = (*stack_a)->next->index;
+	first = (*a)->index;
+	second = (*a)->next->index;
 	if (first > second)
-		sa(stack_a);
+		sa(a);
 }
 
-void	sort_three(t_node **stack_a)
+void	sort_three(t_node **a)
 {
 	int	first;
 	int	second;
 	int	third;
 
-	first = (*stack_a)->index;
-	second = (*stack_a)->next->index;
-	third = (*stack_a)->next->next->index;
+	first = (*a)->index;
+	second = (*a)->next->index;
+	third = (*a)->next->next->index;
 	if (first > second && first > third)
-		ra(stack_a);
+		ra(a);
 	else if (second > first && second > third)
-		rra(stack_a);
-	sort_two(stack_a);
+		rra(a);
+	sort_two(a);
 }
 
-void	sort_four(t_node **stack_a)
+void	sort_four(t_node **a, t_node **b)
 {
-	pb
-	sort three
+	while ((*a)->index != 0)
+		ra(a);
+	pb(a, b);
+	sort_three(a);
+	pa(b, a);
 }
 
-void	sort_five(t_node **stack_a)
+void	sort_five(t_node **a)
 {
 	pb twice
 	sort three
