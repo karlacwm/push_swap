@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 12:41:44 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 15:08:04 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 16:10:18 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,16 @@ t_node	*put_value(int content)
 	return (new);
 }
 
-t_node *find_last_node(t_node *stack)
+t_node	*find_last_node(t_node *stack)
 {
 	if (!stack)
 		return (NULL);
 	while (stack->next)
 		stack = stack->next;
 	return (stack);
-
 }
 
-void	stack_add_back(t_node **stack, t_node *new_node)
+void	stack_add_to_end(t_node **stack, t_node *new_node)
 {
 	t_list	*last_node;
 
@@ -50,4 +49,25 @@ void	stack_add_back(t_node **stack, t_node *new_node)
 	last_node = find_last_node(*stack);
 	last_node->next = new_node;
 	new_node->prev = last_node;
+}
+
+char	*combine_argv(int argc, char **argv)
+{
+	char	*tmp;
+	char	*combined;
+	int		i;
+
+	i = 1;
+	combined = ft_strdup("");
+	if (!combined)
+		return (NULL);
+	while (i < argc)
+	{
+		tmp = ft_strjoin(combined, argv[i]);
+		free(combined);
+		combined = ft_strjoin(tmp, " ");
+		free(tmp);
+		i++;
+	}
+	return (combined);
 }
