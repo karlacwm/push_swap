@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:45:06 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 16:43:56 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 16:55:25 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ ss : sa and sb at the same time
 
 #include "push_swap.h"
 
-void	swap(t_node **a)
+void	swap(t_node **stack)
 {
 	t_node	*first;
 	t_node	*second;
 
-	if (!*a || !(*a)->next)
+	if (!*stack || !(*stack)->next)
 		return ;
-	first = *a;
+	first = *stack;
 	second = first->next;
 	first->next = second->next;
 	if (second->next)
@@ -33,32 +33,25 @@ void	swap(t_node **a)
 	second->next = first;
 	second->prev = NULL;
 	first->prev = second;
-	*a = second;
+	*stack = second;
+	write(1, "sa\n", 3);
+}
+
+void	sa(t_node **a)
+{
+	swap(a);
 	write(1, "sa\n", 3);
 }
 
 void	sb(t_node **b)
 {
-	t_node	*first;
-	t_node	*second;
-
-	if (!*b || !(*b)->next)
-		return ;
-	first = *b;
-	second = first->next;
-	first->next = second->next;
-	if (second->next)
-		second->next->prev = first;
-	second->next = first;
-	second->prev = NULL;
-	first->prev = second;
-	*b = second;
+	swap(b);
 	write(1, "sb\n", 3);
 }
 
 void	ss(t_node **a, t_node **b)
 {
-	// sa(a); // but it already writes sa\n
-	// sb(b);
-	// write(1, "ss\n", 3);
+	swap(a);
+	swap(b);
+	write(1, "ss\n", 3);
 }
