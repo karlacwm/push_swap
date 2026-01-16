@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:58:57 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/09 20:01:20 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 20:10:04 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,36 @@ The last element becomes the first one.
 rrr : rra and rrb at the same time
 
 #include "push_swap.h"
+
+void	reverse_rotate(t_node **stack)
+{
+	t_node	*last;
+
+	if (!*stack)
+		return ;
+	last = find_last_node(*stack);
+	last->prev->next = NULL;
+	last->next = *stack;
+	(*stack)->prev = last;
+	last->prev = NULL;
+	*stack = last;
+}
+
+void	rra(t_node **a)
+{
+	reverse_rotate(a);
+	write(1, "rra\n", 4);
+}
+
+void	rrb(t_node **b)
+{
+	reverse_rotate(b);
+	write(1, "rrb\n", 4);
+}
+
+void	rrr(t_node **a, t_node **b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
+	write(1, "rrr\n", 4);
+}
