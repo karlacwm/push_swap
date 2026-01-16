@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:26:24 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 13:05:46 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 15:26:30 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,20 +65,6 @@ long	ft_atol(const char *str)
 	return (result * sign);
 }
 
-t_node	*put_value(int content)
-{
-	t_node	*new;
-
-	new = malloc(sizeof(t_node));
-	if (!new)
-		return (NULL);
-	new->value = content;
-	new->index = -1;
-	new->next = NULL;
-	new->prev = NULL;
-	return (new);
-}
-
 void	build_stack_a(t_node **a, char **argv, int argc)
 {
 	int		i;
@@ -95,11 +81,10 @@ void	build_stack_a(t_node **a, char **argv, int argc)
 			free_error(a);
 		if (check_duplicates(*a, (int)n))
 			free_error(a);
-		new_node = put_value();
+		new_node = put_value((int)n);
 		if (!new_node)
 			free_error(a);
-		// add to bottom of stack ft_lstaddback
+		stack_add_to_end(a, new_node);
 		i++;
 	}
 }
-
