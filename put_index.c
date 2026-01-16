@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:37:29 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 19:52:23 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 21:51:08 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	*bubble_sort(int *array, int size)
 		}
 		i++;
 	}
+	return (array);
 }
 
 void	indexing(t_node *stack)

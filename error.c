@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:56:49 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/11 11:37:35 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 21:45:14 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	free_errors(t_node **a)
 {
 	free_stack(a);
 	write(2, "Error\n", 6);
-	exit ;
+	return ;
 }

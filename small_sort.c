@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:07:34 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 21:31:58 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 22:20:49 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	sort_two(t_node **a)
 	int	first;
 	int	second;
 
-	first = (*a)->index;
-	second = (*a)->next->index;
+	first = (*a)->value;
+	second = (*a)->next->value;
 	if (first > second)
 		sa(a);
 }
@@ -48,10 +48,17 @@ void	sort_four(t_node **a, t_node **b)
 	pa(b, a);
 }
 
-void	sort_five(t_node **a)
+void	sort_five(t_node **a, t_node **b)
 {
-	pb twice
-	sort three
+	while ((*a)->index != 0)
+		ra(a);
+	pb(a, b);
+	while ((*a)->index != 1)
+		ra(a);
+	pb(a, b);
+	sort_three(a);
+	pa(b, a);
+	pa(b, a);
 }
 // 3	3	2	2	1	1
 // 2	1	3	1	3	2

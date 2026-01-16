@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 12:41:44 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 16:10:18 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 22:04:29 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_node	*find_last_node(t_node *stack)
 
 void	stack_add_to_end(t_node **stack, t_node *new_node)
 {
-	t_list	*last_node;
+	t_node	*last_node;
 
 	if (!stack || !new_node)
 		return ;

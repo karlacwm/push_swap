@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:26:24 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 15:26:30 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/16 22:28:06 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,25 @@ long	ft_atol(const char *str)
 	return (result * sign);
 }
 
-void	build_stack_a(t_node **a, char **argv, int argc)
+void	build_stack_a(t_node **a, char **split_int)
 {
 	int		i;
 	long	n;
 	t_node	*new_node;
 
-	i = 1;
-	while (argv[i])
+	i = 0;
+	while (split_int[i])
 	{
-		if (check_integers(argv[i]))
-			free_error(a);
-		n = ft_atol(argv[i]);
+		if (check_integers(split_int[i]))
+			free_errors(a);
+		n = ft_atol(split_int[i]);
 		if (n > 2147483647 || n < -2147483648)
-			free_error(a);
+			free_errors(a);
 		if (check_duplicates(*a, (int)n))
-			free_error(a);
+			free_errors(a);
 		new_node = put_value((int)n);
 		if (!new_node)
-			free_error(a);
+			free_errors(a);
 		stack_add_to_end(a, new_node);
 		i++;
 	}
