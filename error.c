@@ -6,14 +6,11 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:56:49 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 21:45:14 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/18 15:53:39 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// print error if not int, or duplicated int
-// print Error\n on standard error
 
 void	free_stack(t_node **stack)
 {
@@ -36,5 +33,11 @@ void	free_errors(t_node **a)
 {
 	free_stack(a);
 	write(2, "Error\n", 6);
-	return ;
+	exit(1);
 }
+
+// print error if not int, or duplicated int
+// print Error\n on standard error
+// exit(0): success
+// exit(1): fail
+// echo $?

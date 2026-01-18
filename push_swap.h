@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:47:58 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 22:19:31 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/18 15:55:37 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <unistd.h>
 # include "libft/libft.h"
 
-typedef struct	s_node
+typedef struct s_node
 {
-	int			value;
-	int			index;
+	int				value;
+	int				index;
 	struct s_node	*prev;
 	struct s_node	*next;
 }					t_node;
