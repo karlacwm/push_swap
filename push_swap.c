@@ -6,20 +6,11 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:35:25 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 22:32:37 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/18 15:38:07 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// int	chunk_size(int size)
-// {
-// 	if (size <= 100)
-// 		return ();
-// 	else if (size <= 500)
-// 		return ();
-// 	return (size / );
-// }
 
 int	main(int argc, char **argv)
 {
@@ -38,15 +29,17 @@ int	main(int argc, char **argv)
 	build_stack_a(&a, each_int);
 	indexing(a);
 	size = stack_size(a);
+	print_stacks(a, b);
 	if (size == 2)
 		sort_two(&a);
-	// else if (size == 3)
-	// 	sort_three(&a);
-	// else if (size == 4)
-	// 	sort_four(&a, &b);
-	// else if (size == 5)
-	// 	sort_five(&a, &b);
+	else if (size == 3)
+		sort_three(&a);
+	else if (size == 4)
+		sort_four(&a, &b);
+	else if (size == 5)
+		sort_five(&a, &b);
 	// another sort for more than 5
+	print_stacks(a, b);
 	return (0);
 }
 
