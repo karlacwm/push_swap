@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:07:34 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 22:20:49 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/18 15:41:03 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	sort_four(t_node **a, t_node **b)
 		ra(a);
 	pb(a, b);
 	sort_three(a);
-	pa(b, a);
+	pa(a, b);
 }
 
 void	sort_five(t_node **a, t_node **b)
@@ -57,8 +57,8 @@ void	sort_five(t_node **a, t_node **b)
 		ra(a);
 	pb(a, b);
 	sort_three(a);
-	pa(b, a);
-	pa(b, a);
+	pa(a, b);
+	pa(a, b);
 }
 // 3	3	2	2	1	1
 // 2	1	3	1	3	2
