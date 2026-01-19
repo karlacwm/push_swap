@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 15:04:20 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 13:04:41 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:31:38 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	chunk_size(int size)
 		return (15);
 	else if (size <= 500)
 		return (33);
-	return (50);
+	return (size / 15);
 }
 
 void	k_sort_chunks(t_node **a, t_node **b, int size)
@@ -29,7 +29,6 @@ void	k_sort_chunks(t_node **a, t_node **b, int size)
 
 	chunk = chunk_size(size);
 	i = 0;
-
 	while (*a)
 	{
 		range = i + chunk;
@@ -49,20 +48,41 @@ void	k_sort_chunks(t_node **a, t_node **b, int size)
 	}
 }
 
+int	find_max_index(t_node **b, int b_size)
+{
+	t_node	*current;
+	int		max_index;
+
+	current = *b;
+	max_index = 0;
+	while (current && current->index != (b_size - 1))
+	{
+		max_index++;
+		current = current->next;
+	}
+	return (max_index);
+}
+
 void	refine_chunks(t_node **a, t_node **b)
 {
-	int	max_index;
+	int		b_size;
+	int		max_index;
 
-	max_index = stack_size(*b) - 1;
 	while (*b)
 	{
-		if ((*b)->index == max_index)
+		b_size = stack_size(*b);
+		max_index = find_max_index(b, b_size);
+		if (max_index <= b_size / 2)
 		{
-			pa(a, b);
-			max_index--;
+			while ((*b)->index != (b_size - 1))
+				rb(b);
 		}
 		else
-			rrb(b);
+		{
+			while ((*b)->index != (b_size - 1))
+				rrb(b);
+		}
+		pa(a, b);
 	}
 }
 
@@ -98,8 +118,8 @@ void	k_sort(t_node **a, t_node **b, int size)
 // range = i + chunk
 
 // stack a:	b:
-// 			[8] 9
-// 			[7] 8
+// [7] 8
+// [8] 9
 // 			[5] 6
 // 			[3] 4
 // 			[0] 1
@@ -119,5 +139,3 @@ void	k_sort(t_node **a, t_node **b, int size)
 // pb
 
 // max index = size -1 = 8
-// stack a:	b:
-
