@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:12:31 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 15:26:44 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 10:38:32 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ void	print_stacks(t_node *a, t_node *b)
 		printf("[%d] %d\n", b->index, b->value);
 		b = b->next;
 	}
+	printf("------------------ \n");
 }
