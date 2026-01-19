@@ -9,9 +9,9 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = -rcs
 
-SRCS = error.c parsing.c print_stacks.c push_swap.c push.c \
-	put_index.c reverse_rotate.c rotate.c small_sort.c swap.c \
-	utils.c
+SRCS = error.c k_sort.c parsing.c push_swap.c push.c \
+	put_index.c reverse_rotate.c rotate.c small_sort.c \
+	swap.c utils.c
 
 OBJ = ${SRCS:%.c=%.o}
 

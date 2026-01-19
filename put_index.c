@@ -6,16 +6,11 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:37:29 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 21:51:08 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 17:59:41 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// total number of integers
-// bubble sort
-// put index according to rank in array
-// sort array wont count as operations
 
 int	stack_size(t_node *stack)
 {
@@ -99,3 +94,8 @@ void	indexing(t_node *stack)
 	}
 	free(array);
 }
+
+// total number of integers
+// bubble sort
+// put index according to rank in array
+// sort array wont count as operations
