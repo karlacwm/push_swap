@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:57:28 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/18 15:54:29 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:35:02 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "push_swap.h"
 
-void	push(t_node **from_stack, t_node **to_stack)
+static void	push(t_node **from_stack, t_node **to_stack)
 {
 	t_node	*to_be_pushed;
 

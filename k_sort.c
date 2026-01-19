@@ -6,13 +6,13 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 15:04:20 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 18:31:38 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:39:54 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	chunk_size(int size)
+static int	chunk_size(int size)
 {
 	if (size <= 100)
 		return (15);
@@ -21,7 +21,7 @@ int	chunk_size(int size)
 	return (size / 15);
 }
 
-void	k_sort_chunks(t_node **a, t_node **b, int size)
+static void	k_sort_chunks(t_node **a, t_node **b, int size)
 {
 	int	chunk;
 	int	i;
@@ -48,7 +48,7 @@ void	k_sort_chunks(t_node **a, t_node **b, int size)
 	}
 }
 
-int	find_max_index(t_node **b, int b_size)
+static int	find_max_index(t_node **b, int b_size)
 {
 	t_node	*current;
 	int		max_index;
@@ -63,7 +63,7 @@ int	find_max_index(t_node **b, int b_size)
 	return (max_index);
 }
 
-void	refine_chunks(t_node **a, t_node **b)
+static void	refine_chunks(t_node **a, t_node **b)
 {
 	int		b_size;
 	int		max_index;

@@ -6,11 +6,25 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:35:25 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/18 15:38:07 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:38:56 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	sorting(t_node *a, t_node *b, int size)
+{
+	if (size == 2)
+		sort_two(&a);
+	else if (size == 3)
+		sort_three(&a);
+	else if (size == 4)
+		sort_four(&a, &b);
+	else if (size == 5)
+		sort_five(&a, &b);
+	else
+		k_sort(&a, &b, size);
+}
 
 int	main(int argc, char **argv)
 {
@@ -29,17 +43,7 @@ int	main(int argc, char **argv)
 	build_stack_a(&a, each_int);
 	indexing(a);
 	size = stack_size(a);
-	print_stacks(a, b);
-	if (size == 2)
-		sort_two(&a);
-	else if (size == 3)
-		sort_three(&a);
-	else if (size == 4)
-		sort_four(&a, &b);
-	else if (size == 5)
-		sort_five(&a, &b);
-	// another sort for more than 5
-	print_stacks(a, b);
+	sorting(a, b, size);
 	return (0);
 }
 

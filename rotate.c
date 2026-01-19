@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:58:36 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 21:50:05 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:35:29 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include "push_swap.h"
 
-void	rotate(t_node **stack)
+static void	rotate(t_node **stack)
 {
 	t_node	*first;
 	t_node	*last;

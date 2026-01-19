@@ -6,13 +6,13 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:56:49 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/18 15:53:39 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:44:39 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stack(t_node **stack)
+static void	free_stack(t_node **stack)
 {
 	t_node	*tmp;
 	t_node	*current;

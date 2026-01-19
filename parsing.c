@@ -6,13 +6,13 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:26:24 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/16 22:39:16 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:36:58 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_integers(char *str)
+static int	check_integers(char *str)
 {
 	if (*str == '+' || *str == '-')
 		str++;
@@ -27,7 +27,7 @@ int	check_integers(char *str)
 	return (0);
 }
 
-int	check_duplicates(t_node *a, int n)
+static int	check_duplicates(t_node *a, int n)
 {
 	if (!a)
 		return (0);
@@ -40,7 +40,7 @@ int	check_duplicates(t_node *a, int n)
 	return (0);
 }
 
-long	ft_atol(const char *str)
+static long	ft_atol(const char *str)
 {
 	long	result;
 	int		sign;

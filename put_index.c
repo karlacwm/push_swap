@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:37:29 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 17:59:41 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/19 18:40:42 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	stack_size(t_node *stack)
 	return (i);
 }
 
-int	*stack_to_array(t_node *stack, int size)
+static int	*stack_to_array(t_node *stack, int size)
 {
 	int	*array;
 	int	i;
@@ -45,7 +45,7 @@ int	*stack_to_array(t_node *stack, int size)
 	return (array);
 }
 
-void	*bubble_sort(int *array, int size)
+static void	*bubble_sort(int *array, int size)
 {
 	int	i;
 	int	j;
