@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 11:07:34 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/18 15:55:56 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/20 13:02:32 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,13 @@ void	sort_four(t_node **a, t_node **b)
 
 void	sort_five(t_node **a, t_node **b)
 {
+	if (find_last_node(*a)->index == 0)
+		rra(a);
 	while ((*a)->index != 0)
 		ra(a);
 	pb(a, b);
+	if (find_last_node(*a)->index == 1)
+		rra(a);
 	while ((*a)->index != 1)
 		ra(a);
 	pb(a, b);
@@ -64,3 +68,4 @@ void	sort_five(t_node **a, t_node **b)
 // 3	3	2	2	1	1
 // 2	1	3	1	3	2
 // 1	2	1	3	2	3
+// TEST: 3 5 4 2 1

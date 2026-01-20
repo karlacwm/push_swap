@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:57:28 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 18:35:02 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/20 12:54:19 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@
 
 #include "push_swap.h"
 
+// static void	push(t_node **from_stack, t_node **to_stack)
+// {
+// 	t_node	*to_be_pushed;
+
+// 	if (!from_stack || !to_stack)
+// 		return ;
+// 	to_be_pushed = *from_stack;
+// 	(*from_stack)->prev = NULL;
+// 	*from_stack = (*from_stack)->next;
+// 	to_be_pushed->next = *to_stack;
+// 	to_be_pushed->prev = NULL;
+// 	*to_stack = to_be_pushed;
+// }
+
 static void	push(t_node **from_stack, t_node **to_stack)
 {
 	t_node	*to_be_pushed;
@@ -24,11 +38,14 @@ static void	push(t_node **from_stack, t_node **to_stack)
 	if (!from_stack || !to_stack)
 		return ;
 	to_be_pushed = *from_stack;
-	(*from_stack)->prev = NULL;
-	*from_stack = (*from_stack)->next;
+	*from_stack = to_be_pushed->next;
+	if (*from_stack)
+		(*from_stack)->prev = NULL;
 	to_be_pushed->next = *to_stack;
-	to_be_pushed->prev = NULL;
+	if (*to_stack)
+		(*to_stack)->prev = to_be_pushed;
 	*to_stack = to_be_pushed;
+	to_be_pushed->prev = NULL;
 }
 
 void	pa(t_node **a, t_node **b)

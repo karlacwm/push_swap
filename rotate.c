@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:58:36 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 18:35:29 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/20 13:11:14 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	rotate(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	if (!*stack)
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	first = *stack;
 	last = find_last_node(*stack);

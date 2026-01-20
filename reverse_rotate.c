@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 19:58:57 by wcheung           #+#    #+#             */
-/*   Updated: 2026/01/19 18:35:23 by wcheung          ###   ########.fr       */
+/*   Updated: 2026/01/20 13:11:05 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ static void	reverse_rotate(t_node **stack)
 {
 	t_node	*last;
 
-	if (!*stack)
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	last = find_last_node(*stack);
-	last->prev->next = NULL;
+	if (last->prev)
+		last->prev->next = NULL;
 	last->next = *stack;
 	(*stack)->prev = last;
 	last->prev = NULL;
